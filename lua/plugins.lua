@@ -1,0 +1,41 @@
+plugins = {
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
+  {
+    'neovim/nvim-lspconfig'
+  },
+  
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function () 
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html", "typescript", "rust", "python" },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },  
+        })
+    end
+  },
+
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" }
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua"
+  },
+
+  { 
+    "catppuccin/nvim", 
+    name = "catppuccin", 
+    priority = 1000,
+    lazy = "false"
+  }
+}
