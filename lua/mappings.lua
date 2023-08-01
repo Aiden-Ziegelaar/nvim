@@ -9,3 +9,5 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.api.nvim_set_keymap("n", '<leader>ft', ":NvimTreeToggle<cr>", {silent = true, noremap = true})
 
 vim.api.nvim_set_keymap("n", ";", ":", {})
+
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-N>", {})
