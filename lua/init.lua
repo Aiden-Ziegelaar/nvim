@@ -47,6 +47,9 @@ require('nvim-tree').setup({
   },
 })
 
+require('lspconfig').terraformls.setup({})
+require('lspconfig').tflint.setup({})
+
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
