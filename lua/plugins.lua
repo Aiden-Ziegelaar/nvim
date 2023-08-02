@@ -7,7 +7,11 @@ plugins = {
   {
     'neovim/nvim-lspconfig'
   },
-  
+
+  {
+    'github/copilot.vim',
+  },
+
   {
     'goolord/alpha-nvim',
     event = "VimEnter",
