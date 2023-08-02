@@ -9,6 +9,12 @@ plugins = {
   },
   
   {
+    'goolord/alpha-nvim',
+    event = "VimEnter",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+
+  {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function () 
