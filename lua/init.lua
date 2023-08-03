@@ -2,7 +2,6 @@ local coq = require "coq"
 
 require('lualine').setup()
 opts = { require'alpha.themes.dashboard'.config }
-opts = { require'alpha.themes.dashboard'.config }
 
 local HEIGHT_RATIO = 0.8  -- You can change this
 local WIDTH_RATIO = 0.5   -- You can change this too
