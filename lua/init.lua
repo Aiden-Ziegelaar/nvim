@@ -1,3 +1,5 @@
+local coq = require "coq"
+
 require('lualine').setup()
 opts = { require'alpha.themes.dashboard'.config }
 opts = { require'alpha.themes.dashboard'.config }
@@ -13,7 +15,6 @@ require('catppuccin').setup({
   },
   show_end_of_buffer = false
 })
-
 
 require('alpha').setup(require'alpha.themes.dashboard'.config)
 
@@ -47,8 +48,32 @@ require('nvim-tree').setup({
   },
 })
 
-require('lspconfig').terraformls.setup({})
-require('lspconfig').tflint.setup({})
+require('lspconfig').terraformls.setup(coq.lsp_ensure_capabilities({}))
+
+require('lspconfig').tflint.setup(coq.lsp_ensure_capabilities({}))
+
+require('lspconfig').lua_ls.setup(coq.lsp_ensure_capabilities({
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}))
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

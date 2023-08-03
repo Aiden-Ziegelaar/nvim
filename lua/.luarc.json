@@ -1,0 +1,22 @@
+{
+    "workspace.library": [
+        "/home/aiden/.config/nvim",
+        "/home/aiden/.local/share/nvim/lazy/lazy.nvim",
+        "/home/aiden/.local/share/nvim/lazy/catppuccin",
+        "/home/aiden/.local/share/nvim/lazy/alpha-nvim",
+        "/home/aiden/.local/share/nvim/lazy/nvim-lspconfig",
+        "/home/aiden/.local/share/nvim/lazy/copilot.vim",
+        "/home/aiden/.local/share/nvim/lazy/plenary.nvim",
+        "/home/aiden/.local/share/nvim/lazy/telescope.nvim",
+        "/home/aiden/.local/share/nvim/lazy/nvim-treesitter",
+        "/home/aiden/.local/share/nvim/lazy/nvim-web-devicons",
+        "/home/aiden/.local/share/nvim/lazy/lualine.nvim",
+        "/home/aiden/.local/share/nvim/lazy/nvim-tree.lua",
+        "/home/aiden/.local/share/nvim/lazy/coq_nvim",
+        "/snap/nvim/2809/usr/share/nvim/runtime",
+        "/snap/nvim/2809/usr/share/nvim/runtime/pack/dist/opt/matchit",
+        "/home/aiden/.local/state/nvim/lazy/readme",
+        "/home/aiden/.local/share/nvim/lazy/catppuccin/after",
+        "${3rd}/luassert/library"
+    ]
+}
