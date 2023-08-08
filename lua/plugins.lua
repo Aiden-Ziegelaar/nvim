@@ -50,5 +50,6 @@ plugins = {
   },
   {
     "ms-jpq/coq_nvim"
-  }
+  },
+  require("plugins/coc")
 }
