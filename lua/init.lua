@@ -47,6 +47,23 @@ require('nvim-tree').setup({
   },
 })
 
+require('telescope').setup({
+  defaults = {
+    ripgrep_arguments = {
+      'rg',
+      '--hidden',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case'
+    },
+    file_ignore_patterns = {
+      "node_modules"
+    }
+  },
+})
+
 require('lspconfig').terraformls.setup(coq.lsp_ensure_capabilities({}))
 
 require('lspconfig').tflint.setup(coq.lsp_ensure_capabilities({}))
